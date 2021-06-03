@@ -506,3 +506,33 @@ h6 {
     margin: 1.5em 0 0.5em 0;
     font-size: 1.8rem;
 }
+
+
+/* Container  */
+
+.container, .inner {
+    width: 940px;
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 1280px) {
+    .container, .inner {
+        width: 1140px;
+        max-width: 1140px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .container, .inner {
+        max-width: 728px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container, .inner {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}

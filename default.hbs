@@ -21,49 +21,51 @@
 <body class="{{body_class}}">
 <div class="viewport">
 
-    <header id="gh-head" class="gh-head {{#if @site.cover_image}}has-cover{{/if}}">
-        <nav class="gh-head-inner inner gh-container">
+    <div class="container">
+        <header id="gh-head" class="gh-head {{#if @site.cover_image}}has-cover{{/if}}">
+                <nav class="gh-head-inner inner gh-container">
 
-            {{!-- Logo  --}}
-            <div class="gh-head-brand">
-                <a class="gh-head-logo" href="{{@site.url}}">
-                    {{#if @site.logo}}
-                        <img src="{{@site.logo}}" alt="{{@site.title}}" />
-                    {{else}}
-                        {{@site.title}}
-                    {{/if}}
-                </a>
-                <a class="gh-burger" role="button">
-                    <div class="gh-burger-box">
-                        <div class="gh-burger-inner"></div>
+                    {{!-- Logo  --}}
+                    <div class="gh-head-brand">
+                        <a class="gh-head-logo" href="{{@site.url}}">
+                            {{#if @site.logo}}
+                                <img src="{{@site.logo}}" alt="{{@site.title}}" />
+                            {{else}}
+                                {{@site.title}}
+                            {{/if}}
+                        </a>
+                        <a class="gh-burger" role="button">
+                            <div class="gh-burger-box">
+                                <div class="gh-burger-inner"></div>
+                            </div>
+                        </a>
                     </div>
-                </a>
-            </div>
 
-            {{!-- Navigation  --}}
-            <div class="gh-head-menu">
-                {{navigation}}
-            </div>
+                    {{!-- Navigation  --}}
+                    <div class="gh-head-menu">
+                        {{navigation}}
+                    </div>
 
-            {{!-- CTA and social  --}}
-            <div class="gh-head-actions">
-                <div class="gh-social">
-                    {{#if @site.facebook}}
-                        <a class="gh-social-facebook" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
-                    {{/if}}
-                    {{#if @site.twitter}}
-                        <a class="gh-social-twitter" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
-                    {{/if}}
-                </div>
+                    {{!-- CTA and social  --}}
+                    <div class="gh-head-actions">
+                        <div class="gh-social">
+                            {{#if @site.facebook}}
+                                <a class="gh-social-facebook" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
+                            {{/if}}
+                            {{#if @site.twitter}}
+                                <a class="gh-social-twitter" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
+                            {{/if}}
+                        </div>
 
-                {{#unless @member}}
-                    <a class="gh-head-button" href="#/portal/signup">Subscribe</a>
-                {{else}}
-                    <a class="gh-head-button" href="#/portal/account">Account</a>
-                {{/unless}}
-            </div>
-        </nav>
-    </header>
+                        {{#unless @member}}
+                            <a class="gh-head-button" href="#/portal/signup">Subscribe</a>
+                        {{else}}
+                            <a class="gh-head-button" href="#/portal/account">Account</a>
+                        {{/unless}}
+                    </div>
+                </nav>
+        </header>
+    </div>
 
     <main>
         {{!-- All other templates get inserted here, index.hbs, post.hbs, etc --}}
@@ -71,13 +73,131 @@
     </main>
 
     {{!-- The global footer at the very bottom of the screen --}}
-    <footer class="site-footer outer">
+    {{!-- <footer class="site-footer outer">
         <div class="inner">
             <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
             <nav class="site-footer-nav">
                 {{navigation type="secondary"}}
             </nav>
             <div><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
+        </div>
+    </footer> --}}
+    <footer class="footer footer-section">
+
+        <div class="container w-container">
+            <div class="footer-wrapper">
+                <div class="footer-content">
+                    <div class="footer---company">
+                        <img src="https://uploads-ssl.webflow.com/5ec8088c0a860f39fe6e8b83/5f2bdb53d62f1427b48adb5f_logo-white.svg" alt="">
+                        <div class="footer---contacts">
+                            <div class="div-block-217">
+                                <div class="text-block-14 title">UNITED&nbsp;STATES</div>
+                                <div class="text-block-14 name">Turing College Inc.</div>
+                                <a href="https://www.google.com/maps/place/1209+N+Orange+St,+Wilmington,+DE+19801,+USA/@39.7484301,-75.5499194,17z/data=!3m1!4b1!4m5!3m4!1s0x89c6fd3f092d8597:0x8a88e1050ea4a96f!8m2!3d39.7484301!4d-75.5477307" target="_blank" class="footer-link address">1209 Orange St, Wilmington, <br>DE 19801, United States<br></a>
+                            </div>
+                            <div class="div-block-217">
+                                <div class="text-block-14 title">LITHUANIA</div>
+                                <div class="text-block-14 name">Turing College, UAB</div>
+                                <a href="https://www.google.com/maps/place/Turing+College/@54.7037049,25.2781468,15z/data=!4m5!3m4!1s0x0:0x308a40fe47d69e2!8m2!3d54.7037049!4d25.2781468" target="_blank" class="footer-link address">Žalgirio street 90, Vilnius, Lithuania<br></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-layout-grid footer---links-block">
+                        <div class="footer---about-us">
+                            <div class="footer-heading">About us</div>
+                            <a href="/who-are-we" class="footer-link">Who Are We?</a>
+                            <a href="/team" class="footer-link">Team</a>
+                            <a href="/eu-funding" class="footer-link">EU Funding</a>
+                            <a href="/help-center" class="footer-link faq">FAQ</a>
+                            <a href="/contacts" class="footer-link">Contacts</a>
+                            <a href="/blog" class="footer-link">Blog</a>
+                            <a href="/press-room/about" class="footer-link">Press Room</a>
+                        </div>
+                        <div class="footer---education">
+                            <div class="footer-heading">Education</div>
+                            <a href="/data-science" class="footer-link">Data Science course</a>
+                            <a href="/admissions" class="footer-link">Admissions</a>
+                            <a href="/tuition-options" class="footer-link">Tuition Options</a>
+                            <a href="/career-placement" class="footer-link">Career Placement</a>
+                            <a href="/education-concept" class="footer-link">Education Concept</a>
+                            <a href="/remote-friendly" class="footer-link">Remote-friendly</a>
+                            <a href="/quiz" class="footer-link">Turing Challenge</a>
+                        </div>
+                        <div class="footer---social-media">
+                            <div class="footer-heading">Connect with us</div>
+                            <div class="w-layout-grid social-media">
+                                <a href="https://www.facebook.com/turingcollege" target="_blank" class="social-media-icon w-inline-block">
+                                    <div class="fb-icon w-embed">
+                                        <style>
+                                            .fb-icon path {
+                                                fill: #bebec1;
+                                            }
+                                            .fb-icon:hover path {
+                                                fill: white;
+                                            }
+                                        </style>
+
+                                        <svg class="fb-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.374 12.0498C23.374 5.62793 18.1709 0.424805 11.749 0.424805C5.32715 0.424805 0.124023 5.62793 0.124023 12.0498C0.124023 17.8623 4.34277 22.6904 9.9209 23.5342V15.4248H6.96777V12.0498H9.9209V9.51855C9.9209 6.6123 11.6553 4.97168 14.2803 4.97168C15.5928 4.97168 16.9053 5.20605 16.9053 5.20605V8.06543H15.4521C13.999 8.06543 13.5303 8.95605 13.5303 9.89355V12.0498H16.7646L16.249 15.4248H13.5303V23.5342C19.1084 22.6904 23.374 17.8623 23.374 12.0498Z" fill="#505050"></path>
+                                        </svg>
+                                    </div>
+                                </a>
+                                <a href="https://www.linkedin.com/company/turingcollege/" target="_blank" class="social-media-icon w-inline-block">
+                                    <div class="w-embed">
+                                        <style>
+                                            .fb-icon:hover path {
+                                                fill: #62646A;
+                                            }
+                                        </style>
+                                        <svg class="fb-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.95996 21.0498V7.03418H0.600586V21.0498H4.95996ZM2.75684 5.15918C4.16309 5.15918 5.28809 3.9873 5.28809 2.58105C5.28809 1.22168 4.16309 0.0966797 2.75684 0.0966797C1.39746 0.0966797 0.272461 1.22168 0.272461 2.58105C0.272461 3.9873 1.39746 5.15918 2.75684 5.15918ZM21.2256 21.0498H21.2725V13.3623C21.2725 9.6123 20.4287 6.70605 16.0225 6.70605C13.9131 6.70605 12.5068 7.87793 11.8975 8.95605H11.8506V7.03418H7.67871V21.0498H12.0381V14.1123C12.0381 12.2842 12.3662 10.5498 14.6162 10.5498C16.8662 10.5498 16.9131 12.6123 16.9131 14.2529V21.0498H21.2256Z" fill="#505050"></path>
+                                        </svg>
+                                    </div>
+                                </a>
+                                <a href="https://www.youtube.com/channel/UCNoahX0Q8GNJc43o782ASzg" target="_blank" class="social-media-icon w-inline-block">
+                                    <div class="w-embed">
+                                        <style>
+                                            .fb-icon:hover path {
+                                                fill: #62646A;
+                                            }
+                                        </style>
+                                        <svg class="fb-icon" width="27" height="18" viewBox="0 0 27 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M25.7344 2.85938C25.4531 1.73438 24.5625 0.84375 23.4844 0.5625C21.4688 0 13.5 0 13.5 0C13.5 0 5.48438 0 3.46875 0.5625C2.39062 0.84375 1.5 1.73438 1.21875 2.85938C0.65625 4.82812 0.65625 9.04688 0.65625 9.04688C0.65625 9.04688 0.65625 13.2188 1.21875 15.2344C1.5 16.3594 2.39062 17.2031 3.46875 17.4844C5.48438 18 13.5 18 13.5 18C13.5 18 21.4688 18 23.4844 17.4844C24.5625 17.2031 25.4531 16.3594 25.7344 15.2344C26.2969 13.2188 26.2969 9.04688 26.2969 9.04688C26.2969 9.04688 26.2969 4.82812 25.7344 2.85938ZM10.875 12.8438V5.25L17.5312 9.04688L10.875 12.8438Z" fill="#BEBEC1"></path>
+                                        </svg>
+                                    </div>
+                                </a>
+                                <a href="https://twitter.com/turing_college" target="_blank" class="social-media-icon w-inline-block">
+                                    <div class="w-embed">
+                                        <style>
+                                            .fb-icon:hover path {
+                                                fill: #62646A;
+                                            }
+                                        </style>
+                                        <svg class="fb-icon" width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19.7227 5.28125C20.582 4.63672 21.3555 3.86328 21.957 2.96094C21.1836 3.30469 20.2812 3.5625 19.3789 3.64844C20.3242 3.08984 21.0117 2.23047 21.3555 1.15625C20.4961 1.67188 19.5078 2.05859 18.5195 2.27344C17.6602 1.37109 16.5 0.855469 15.2109 0.855469C12.7188 0.855469 10.6992 2.875 10.6992 5.36719C10.6992 5.71094 10.7422 6.05469 10.8281 6.39844C7.08984 6.18359 3.73828 4.37891 1.50391 1.67188C1.11719 2.31641 0.902344 3.08984 0.902344 3.94922C0.902344 5.49609 1.67578 6.87109 2.92188 7.6875C2.19141 7.64453 1.46094 7.47266 0.859375 7.12891V7.17188C0.859375 9.36328 2.40625 11.168 4.46875 11.5977C4.125 11.6836 3.69531 11.7695 3.30859 11.7695C3.00781 11.7695 2.75 11.7266 2.44922 11.6836C3.00781 13.4883 4.68359 14.7773 6.66016 14.8203C5.11328 16.0234 3.17969 16.7539 1.07422 16.7539C0.6875 16.7539 0.34375 16.7109 0 16.668C1.97656 17.957 4.33984 18.6875 6.91797 18.6875C15.2109 18.6875 19.7227 11.8555 19.7227 5.88281C19.7227 5.66797 19.7227 5.49609 19.7227 5.28125Z" fill="#BEBEC1"></path>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                            <a href="/en/privacy-policy" class="footer-link">Privacy policy</a>
+                            <a href="/en/terms-conditions" class="footer-link">Terms &amp; conditions</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://www.ycombinator.com/" target="_blank" class="yc-wrapper footer w-inline-block">
+                    <img src="https://uploads-ssl.webflow.com/5ec8088c0a860f39fe6e8b83/605a47eff4aec5d4f1850c54_Layer%202.svg" loading="lazy" alt="" class="yc-logo">
+                        <div class="yc-text">Backed by Y Combinator</div>
+                </a>
+                <div class="copyrights">© 2021, Turing College</div>
+                <div class="w-embed">
+                    <style type="text/css">
+                        input, textarea {
+                            -webkit-appearance: none;
+                            border-radius: 0; 
+                        } 
+                    </style>
+                </div>
+            </div>
         </div>
     </footer>
 
