@@ -606,6 +606,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 .post-card-primary-tag {
     margin: 0 0 0.2em;
     color: var(--ghost-accent-color);
+    font-family: "Helvetica Now Text";
     font-size: 1.2rem;
     font-weight: 500;
     letter-spacing: 0.2px;
@@ -616,6 +617,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     margin: 0 0 0.4em;
     font-size: 2.4rem;
     transition: color 0.2s ease-in-out;
+    font-family: "Helvetica Now Display";
 }
 
 .no-image .post-card-title {
@@ -962,7 +964,7 @@ is the very first element in the post content */
 .gh-content > ul,
 .gh-content > dl,
 .gh-content > p {
-    font-family: var(--font-text-regular);
+    font-family: "Helvetica Now Text";
     font-weight: 400;
     font-size: 2.1rem;
     line-height: 1.6em;
@@ -1721,7 +1723,8 @@ footer.footer-section {
 }
 
 .text-block-14 {
-    font-family: var(--font-text-medium);
+    font-family: "Helvetica Now Text";
+    font-weight: 500;
     color: var(--color-grey75);
     font-size: 15px;
     text-align: left;
@@ -1762,7 +1765,8 @@ footer.footer-section {
 .footer-heading {
     margin-top: 0;
     margin-bottom: 10px;
-    font-family: var(--font-text-bold);
+    font-family: "Helvetica Now Text";
+    font-weight: 700;
     color: #f7f8f9;
     font-size: 16px;
     line-height: 1.5;
@@ -1775,7 +1779,8 @@ footer.footer-section {
     margin-bottom: 2px;
     -webkit-transition: .2s;
     transition: .2s;
-    font-family: var(--font-text-medium);
+    font-family: "Helvetica Now Text";
+    font-weight: 500;
     color: var(--color-grey75);
     font-size: 15px;
     text-align: left;
@@ -1806,7 +1811,8 @@ footer.footer-section {
     margin-right: 20px;
 }
 .yc-text {
-    font-family: var(--font-text-medium);
+    font-family: "Helvetica Now Text";
+    font-weight: 500;
     color: var(--color-grey92);
     font-size: 20px;
     line-height: 25px;
@@ -1814,7 +1820,8 @@ footer.footer-section {
 
 /* Copyrights  */
 .copyrights {
-    font-family: var(--font-text-regular);
+    font-family: "Helvetica Now Text";
+    font-weight: 500;
     color: var(--color-grey50);
     font-size: 11px;
 }
