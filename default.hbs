@@ -24,6 +24,7 @@
     <header id="gh-head" class="gh-head {{#if @site.cover_image}}has-cover{{/if}}">
         <nav class="gh-head-inner inner gh-container">
 
+            {{!-- Logo  --}}
             <div class="gh-head-brand">
                 <a class="gh-head-logo" href="{{@site.url}}">
                     {{#if @site.logo}}
@@ -38,9 +39,13 @@
                     </div>
                 </a>
             </div>
+
+            {{!-- Navigation  --}}
             <div class="gh-head-menu">
                 {{navigation}}
             </div>
+
+            {{!-- CTA and social  --}}
             <div class="gh-head-actions">
                 <div class="gh-social">
                     {{#if @site.facebook}}

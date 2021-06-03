@@ -42,6 +42,12 @@ production stylesheet in assets/built/screen.css
     --color-wash: #e5eff5;
     --color-darkmode: #151719;
 
+    --color-purple: #673AFF;
+    --color-black20: #303236;
+    --color-black16: #27282C;
+    --color-bg: #2B2D30;
+
+
     /*
     An accent color is also set by Ghost itself in
     Ghost Admin > Settings > Brand
@@ -55,7 +61,6 @@ production stylesheet in assets/built/screen.css
     --font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     --font-serif: Georgia, Times, serif;
     --font-mono: Menlo, Courier, monospace;
-
 }
 
 
@@ -91,8 +96,9 @@ production stylesheet in assets/built/screen.css
 
 .site-header {
     position: relative;
-    color: #fff;
-    background: var(--ghost-accent-color);
+    color: #333;
+    /* background: var(--ghost-accent-color); */
+    background-color: white;
 }
 
 .site-header-cover {
@@ -137,6 +143,10 @@ production stylesheet in assets/built/screen.css
     opacity: 0.8;
 }
 
+.site-header-content h1 {
+    color: black;
+}
+
 @media (max-width: 600px) {
     .site-header-content p {
         max-width: 80vmin;
@@ -158,7 +168,8 @@ production stylesheet in assets/built/screen.css
     font-size: 2.5rem;
     font-weight: 400;
     color: #fff;
-    background: var(--ghost-accent-color);
+    /* background: var(--ghost-accent-color); */
+    background-color: white;
 }
 
 
@@ -170,13 +181,20 @@ production stylesheet in assets/built/screen.css
     padding: 1vmin 4vmin;
     font-size: 1.6rem;
     line-height: 1.3em;
-    color: #fff;
-    background: var(--ghost-accent-color);
+    color: var(--color-black20);
+    background-color: white;
+    height: 80px;
+    display: flex;
+    align-items: center;
 }
 
 .gh-head a {
     color: inherit;
     text-decoration: none;
+}
+
+.gh-head a:hover {
+    color: var(--color-purple);
 }
 
 .gh-head-inner {
@@ -209,7 +227,8 @@ production stylesheet in assets/built/screen.css
 }
 
 .gh-head-logo img {
-    max-height: 26px;
+    /* max-height: 26px; */
+    width: 190px;
 }
 
 
@@ -502,7 +521,8 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 }
 
 .home-template.gh-head-open .gh-head {
-    background: var(--ghost-accent-color);
+    /* background: var(--ghost-accent-color); */
+    background-color: white;
 }
 
 .home-template .gh-head-logo {
@@ -544,6 +564,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     min-height: 220px;
     background-size: cover;
     word-break: break-word;
+    margin-bottom: 20px;
 }
 
 .post-card-image-link {
@@ -617,7 +638,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     margin-bottom: 1em;
     display: -webkit-box;
     overflow-y: hidden;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     word-break: break-word;
 }
@@ -942,7 +963,7 @@ is the very first element in the post content */
 .gh-content > ul,
 .gh-content > dl,
 .gh-content > p {
-    font-family: var(--font-serif);
+    font-family: var(--font-text-regular);
     font-weight: 400;
     font-size: 2.1rem;
     line-height: 1.6em;
@@ -1398,7 +1419,7 @@ Ghost editor. */
     padding: 9vmin 4vmin 10vmin;
     color: #fff;
     text-align: center;
-    background: var(--color-darkgrey);
+    background: var(--color-black16);
 }
 
 /* Increases the default h2 size by 15%, for small and large screens */
@@ -1424,7 +1445,7 @@ Ghost editor. */
     font-size: 1.8rem;
     color: var(--color-midgrey);
     background: #fff;
-    border-radius: 8px;
+    border-radius: 4px;
 }
 
 .footer-cta-button span {
@@ -1433,7 +1454,7 @@ Ghost editor. */
     color: #fff;
     font-weight: 500;
     background: var(--ghost-accent-color);
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 
@@ -1445,7 +1466,8 @@ Ghost editor. */
     padding: 4vmin;
     margin: 0 auto -40px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    background: color-mod(var(--color-darkgrey) l(-5%));
+    /* background: color-mod(var(--color-black16) l(-5%)); */
+    background-color: var(--color-black16);
 }
 
 .read-more {
