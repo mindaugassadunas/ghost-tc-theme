@@ -122,14 +122,8 @@ production stylesheet in assets/built/screen.css
 .site-header-content {
     position: relative;
     z-index: 100;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 6vw 3vw;
-    min-height: 200px;
     max-height: 340px;
-    text-align: center;
+    padding: 120px 0px 10px 0px;
 }
 
 .site-title {
@@ -171,7 +165,6 @@ production stylesheet in assets/built/screen.css
 }
 
 .site-header-content {
-    padding: 18vmin 4vmin;
     font-size: 2.5rem;
     font-weight: 400;
     color: #fff;
@@ -538,9 +531,9 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 .post-feed {
     position: relative;
     display: grid;
-    grid-gap: 4vmin;
+    grid-gap: 3vmin;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 4vmin 0;
+    padding: 3vmin 0;
 }
 
 @media (max-width: 1000px) {
@@ -744,6 +737,40 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 .single-author-name {
     display: inline-block;
 }
+
+
+
+/* Tags sections  */
+
+.tag-section {
+    margin-bottom: 40px;
+}
+
+.tag-section__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog-home.tag-name {
+    font-size: 36px;
+    margin: 0;
+}
+
+.tag-section__link {
+    display: flex;
+    align-items: center;
+}
+
+.tag-link__text {
+    font-size: 18px;
+    color: var(--color-purple);
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+
+
 
 /* Special Styling for home page grid (below):
 
@@ -1614,6 +1641,38 @@ Ghost editor. */
 
 .tag-template .post-card-large .post-card-content {
     order: 1;
+}
+
+.tag-template .gh-head {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2000;
+}
+
+.tags-tabs {
+    position: relative;
+    z-index: 10000;
+    margin-bottom: 40px;
+}
+
+.tags-tab {
+    font-size: 18px;
+    padding: 10px 12px;
+    border-radius: 4px;
+    color: var(--color-grey50);
+    border: transparent solid 1px;
+    transition: all 200ms;
+}
+
+.tags-tab:hover {
+    border-color: var(--color-grey50);
+}
+
+.tags-tab.current {
+    color: var(--color-purple);
+    border-color: var(--color-purple);
 }
 
 

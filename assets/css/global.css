@@ -292,8 +292,8 @@ th {
 
 @font-face {
     font-family: 'Helvetica Now Display';
-    src: url('../fonts/HelveticaNowDisplay-bold.svg') format('svg'),
-        url('../fonts/HelveticaNowDisplay-bold.woff') format('woff');
+    src: url('../fonts/HelveticaNowDisplay-Bold.svg') format('svg'),
+        url('../fonts/HelveticaNowDisplay-Bold.woff') format('woff');
     font-weight: 700;
 }
 
