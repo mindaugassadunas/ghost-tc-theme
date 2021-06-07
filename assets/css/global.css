@@ -531,6 +531,7 @@ h6 {
 
 @media screen and (max-width: 991px) {
     .container, .inner {
+        width: auto;
         max-width: 728px;
     }
 }
@@ -539,5 +540,10 @@ h6 {
     .container, .inner {
         padding-right: 15px;
         padding-left: 15px;
+    }
+
+    .site-main > .inner {
+        padding-left: 0px;
+        padding-right: 0px;
     }
 }

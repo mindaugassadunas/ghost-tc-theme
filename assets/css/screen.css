@@ -126,6 +126,10 @@ production stylesheet in assets/built/screen.css
     padding: 120px 0px 10px 0px;
 }
 
+.site-header-content h1 {
+    margin-bottom: 10px;
+}
+
 .site-title {
     z-index: 10;
     margin: 0 0 0.15em;
@@ -238,6 +242,7 @@ production stylesheet in assets/built/screen.css
     display: flex;
     align-items: center;
     font-weight: 500;
+    margin-left: 40px;
 }
 
 .gh-head-menu .nav {
@@ -257,7 +262,7 @@ production stylesheet in assets/built/screen.css
 .gh-head-menu .nav a {
     display: inline-block;
     padding: 5px 0;
-    opacity: 0.8
+    font-weight: 400;
 }
 
 .gh-head-menu .nav a:hover {
@@ -427,7 +432,6 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
         overflow: hidden;
     }
     #gh-head .gh-head-inner {
-        height: 100%;
         grid-template-columns: 1fr;
     }
     #gh-head .gh-head-brand {
@@ -440,9 +444,9 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
         justify-content: space-between;
         user-select: none;
     }
-    .home-template #gh-head .gh-head-brand {
+    /* .home-template #gh-head .gh-head-brand {
         justify-content: flex-end;
-    }
+    } */
     #gh-head .gh-head-menu {
         align-self: center;
         display: flex;
@@ -534,6 +538,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     grid-gap: 3vmin;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 3vmin 0;
+    margin-bottom: 60px;
 }
 
 @media (max-width: 1000px) {
@@ -556,7 +561,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     min-height: 220px;
     background-size: cover;
     word-break: break-word;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .post-card-image-link {
@@ -578,10 +583,15 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     position: relative;
     display: block;
     color: var(--color-darkgrey);
+    transition: all 0.2s;
 }
 
 .post-card-content-link:hover {
     text-decoration: none;
+}
+
+.post-card-content-link:hover .post-card-title {
+    color: var(--color-purple);
 }
 
 .post-card-header {
@@ -821,6 +831,12 @@ make sure this only happens on large viewports / desktop-ish devices.
         font-size: 1.7rem;
         line-height: 1.55em;
         -webkit-line-clamp: 8;
+    }
+}
+
+@media (max-width: 1000px) {
+    .post-card-excerpt {
+        display: none;
     }
 }
 
@@ -1492,6 +1508,7 @@ Ghost editor. */
 .read-more-wrap {
     width: 100%;
     padding: 4vmin;
+    padding-bottom: 120px;
     margin: 0 auto -40px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     /* background: color-mod(var(--color-black16) l(-5%)); */
@@ -1655,6 +1672,8 @@ Ghost editor. */
     position: relative;
     z-index: 10000;
     margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .tags-tab {
@@ -1837,13 +1856,17 @@ footer.footer-section {
     display: block;
     margin-bottom: 2px;
     -webkit-transition: .2s;
-    transition: .2s;
+    transition: all .2s;
     font-family: "Helvetica Now Text";
     font-weight: 500;
     color: var(--color-grey75);
     font-size: 15px;
     text-align: left;
     text-decoration: none;
+}
+
+.footer-link:hover {
+    color: var(--color-grey92);
 }
 
 .social-media {

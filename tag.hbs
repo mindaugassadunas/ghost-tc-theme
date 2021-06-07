@@ -37,11 +37,12 @@
 
 
 {{!-- Active category tab  --}}
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script async>
-    $('.tags-tab').each(function() {
-        if($(this).attr('href') == window.location.pathname) {
-            $(this).addClass('current');
+    const tabs = document.querySelectorAll('.tags-tab');
+    for (let i = 0; i < tabs.length; i++) { 
+        const att = tabs[i].getAttribute('href');
+        if(att == window.location.pathname){
+            tabs[i].classList.add('current');
         }
-    });
+    }
 </script>
