@@ -33,13 +33,15 @@ into the {body} of the default.hbs template --}}
 <main id="site-main" class="site-main outer">
     <div class="inner posts">
 
-            <div class="tags-tabs">
-                {{#get 'tags' limit='all' inclue='count.posts' order='count.posts desc'}}
-                    <a class="tags-tab current" href="{{@site.url}}">All</a>
-                    {{#foreach tags}}
-                        <a class="tags-tab" href="{{url}}">{{name}}</a>
-                    {{/foreach}}
-                {{/get}}
+            <div class="tags-tabs__container">
+                <div class="tags-tabs">
+                    {{#get 'tags' limit='all' inclue='count.posts' order='count.posts desc'}}
+                        <a class="tags-tab current" href="{{@site.url}}">All</a>
+                        {{#foreach tags}}
+                            <a class="tags-tab" href="{{url}}">{{name}}</a>
+                        {{/foreach}}
+                    {{/get}}
+                </div>
             </div>
 
             {{#get 'posts' limit='12' include='tags,authors'}}
