@@ -13,13 +13,19 @@
     <div class="inner posts">
 
         {{#tag}}
-            <div class="tags-tabs">
-                {{#get 'tags' limit='all' inclue='count.posts' order='count.posts desc'}}
-                    <a class="tags-tab" href="{{@site.url}}">All</a>
-                    {{#foreach tags}}
-                        <a class="tags-tab" href="{{url}}">{{name}}</a>
-                    {{/foreach}}
-                {{/get}}
+            <div class="tags-tabs__container">
+                <div class="tags-tabs">
+                    {{#get 'tags' limit='all' inclue='count.posts' order='count.posts desc'}}
+                        <a class="tags-tab" href="{{@site.url}}">All</a>
+                        {{#foreach tags}}
+                            <a class="tags-tab" href="{{url}}">{{name}}</a>
+                        {{/foreach}}
+                    {{/get}}
+                </div>
+                <div class="tag-desc">
+                    <p class="post-card-primary-tag">{{name}}</p>
+                    <p class="tag-desc__p">{{description}}</p>
+                </div>
             </div>
         {{/tag}}
 

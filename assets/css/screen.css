@@ -621,6 +621,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     font-size: 2.4rem;
     transition: color 0.2s ease-in-out;
     font-family: "Helvetica Now Display";
+    line-height: 1.3; 
 }
 
 .no-image .post-card-title {
@@ -1668,10 +1669,13 @@ Ghost editor. */
     z-index: 2000;
 }
 
+.tags-tabs__container {
+    margin-bottom: 40px;
+}
+
 .tags-tabs {
     position: relative;
     z-index: 10000;
-    margin-bottom: 40px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -1692,6 +1696,12 @@ Ghost editor. */
 .tags-tab.current {
     color: var(--color-purple);
     border-color: var(--color-purple);
+}
+
+.tag-desc {
+    font-size: 18px;
+    margin: 16px 0px 40px 0px;
+    max-width: 600px;
 }
 
 
