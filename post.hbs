@@ -11,6 +11,15 @@ into the {body} tag of the default.hbs template --}}
 
     <header class="article-header gh-canvas">
 
+        <div class="nav">
+            <div class="to-homepage">
+                <svg class="to-homepage__arrow" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.08586 7.50008L0.292969 1.70718L1.70718 0.292969L8.91429 7.50008L1.70718 14.7072L0.292969 13.293L6.08586 7.50008Z" fill="#7C7D83"/>
+                </svg>
+                <a class="to-homepage__a" href="{{@site.url}}">To the blog</a>
+            </div>
+        </div>
+
         {{#if primary_tag}}
         <section class="article-tag">
             <a href="{{primary_tag.url}}">{{primary_tag.name}}</a>
@@ -325,5 +334,9 @@ into the {body} tag of the default.hbs template --}}
 
     </div>
 </aside>
+
+<script async>
+	mixpanel.track("Pageview", {"Location": 'Blog page', "Title": '{{title}}' || null})
+</script>
 
 {{/post}}

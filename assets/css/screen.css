@@ -200,11 +200,66 @@ production stylesheet in assets/built/screen.css
     color: var(--color-purple);
 }
 
+.to-homepage {
+    margin-bottom: 42px;
+}
+
+.to-homepage__a {
+    margin-left: 8px;
+    color: var(--color-grey50);
+}
+
+.to-homepage__arrow {
+    width: 8px;
+    transform: rotate(180deg);
+}
+
+.to-homepage:hover > .to-homepage__a {
+    color: var(--color-purple);
+}
+
+.to-homepage:hover > .to-homepage__arrow > path {
+    fill: var(--color-purple);
+}
+
 .gh-head-inner {
-    display: grid;
-    grid-gap: 2.5vmin;
-    grid-template-columns: auto auto 1fr;
-    grid-auto-flow: row dense;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    display: inline-block;
+    height: 44px;
+    padding-right: 15px;
+    padding-left: 15px;
+    align-items: center;
+    align-self: center;
+    border-radius: 2px;
+    background-color: #673aff;
+    transition: background-color .2s;
+    font-family: 'Helvetica Now Text',sans-serif;
+    color: #eaeaeb;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.button:hover {
+    background-color: #5c33e7;
+}
+
+.button-wrapper {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.button__text {
+    font-family: 'Helvetica Now Text',sans-serif;
+    color: #eaeaeb;
+    line-height: 16px;
+    font-weight: 400;
 }
 
 
@@ -608,7 +663,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 
 .post-card-primary-tag {
     margin: 0 0 0.2em;
-    color: var(--ghost-accent-color);
+    color: var(--color-purple);
     font-family: "Helvetica Now Text";
     font-size: 1.2rem;
     font-weight: 500;
@@ -858,6 +913,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 
 .article {
     padding: 8vmin 0;
+    padding-top: 40px;
     word-break: break-word;
 }
 
@@ -870,11 +926,11 @@ make sure this only happens on large viewports / desktop-ish devices.
     justify-content: flex-start;
     align-items: center;
     margin: 0 0 0.5rem;
-    color: var(--color-midgrey);
+    color: var(--color-purple);
     font-size: 1.3rem;
     line-height: 1.4em;
     letter-spacing: 0.02em;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
 }
 

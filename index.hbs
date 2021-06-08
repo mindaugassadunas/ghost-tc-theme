@@ -44,7 +44,7 @@ into the {body} of the default.hbs template --}}
                 </div>
             </div>
 
-            {{#get 'posts' limit='12' include='tags,authors'}}
+            {{#get 'posts' limit='all' include='tags,authors'}}
                 <div class="post-feed">
                     {{#foreach posts}}
                         {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
@@ -56,3 +56,7 @@ into the {body} of the default.hbs template --}}
 
     </div>
 </main>
+
+<script async>
+	mixpanel.track("Pageview", {"Location": 'Blog category', "Title": 'All' || null})
+</script>

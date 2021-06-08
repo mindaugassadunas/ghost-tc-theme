@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{@site.locale}}">
 <head>
-
+    
     {{!-- Basic meta - advanced meta is output with {ghost_head} below --}}
     <title>{{meta_title}}</title>
     <meta charset="utf-8" />
@@ -27,7 +27,7 @@
 
                     {{!-- Logo  --}}
                     <div class="gh-head-brand">
-                        <a class="gh-head-logo" href="{{@site.url}}">
+                        <a class="gh-head-logo" href="https://www.turingcollege.com">
                             {{#if @site.logo}}
                                 <img src="{{@site.logo}}" alt="{{@site.title}}" />
                             {{else}}
@@ -42,21 +42,15 @@
                     </div>
 
                     {{!-- Navigation  --}}
-                    <div class="gh-head-menu">
+                    {{!-- <div class="gh-head-menu">
                         {{navigation}}
-                    </div>
+                    </div> --}}
 
-                    {{!-- CTA and social  --}}
-                    <div class="gh-head-actions">
-                        <div class="gh-social">
-                            {{#if @site.facebook}}
-                                <a class="gh-social-facebook" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
-                            {{/if}}
-                            {{#if @site.twitter}}
-                                <a class="gh-social-twitter" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
-                            {{/if}}
+                    <a id="apply__navbar" class="typeform-share button" href="https://tsociety.typeform.com/to/HnNInw8Y" data-mode="popup" data-hide-headers=true data-hide-footer=true target="_blank">
+                        <div class="button-wrapper">
+                            <div class="button__text">Apply now</div>
                         </div>
-                    </div>
+                    </a>
                 </nav>
         </header>
     </div>

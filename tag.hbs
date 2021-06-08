@@ -52,3 +52,9 @@
         }
     }
 </script>
+
+{{#tag}}
+<script async>
+	mixpanel.track("Pageview", {"Location": 'Blog category', "Title": '{{name}}' || null})
+</script>
+{{/tag}}
