@@ -123,7 +123,7 @@ production stylesheet in assets/built/screen.css
     position: relative;
     z-index: 100;
     max-height: 340px;
-    padding: 120px 0px 10px 0px;
+    padding: 0px 0px 10px 0px;
 }
 
 .site-header-content h1 {
@@ -485,6 +485,11 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     #gh-head {
         transition: all 0.4s ease-out;
         overflow: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 2000;
     }
     #gh-head .gh-head-inner {
         grid-template-columns: 1fr;
@@ -502,6 +507,15 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     /* .home-template #gh-head .gh-head-brand {
         justify-content: flex-end;
     } */
+
+    .home-template, .tag-template {
+        padding-top: 120px;
+    }
+
+    .post-template {
+        padding-top: 80px;
+    }
+
     #gh-head .gh-head-menu {
         align-self: center;
         display: flex;
