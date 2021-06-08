@@ -159,6 +159,10 @@ production stylesheet in assets/built/screen.css
     }
 }
 
+.home-template, .tag-template {
+    padding-top: 120px;
+}
+
 /* 4.1 Home header
 /* ---------------------------------------------------------- */
 
