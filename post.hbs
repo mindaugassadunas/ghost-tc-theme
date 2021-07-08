@@ -336,7 +336,7 @@ into the {body} tag of the default.hbs template --}}
 </aside>
 
 <script async>
-	mixpanel.track("Pageview", {"Location": 'Blog page', "Title": '{{title}}' || null})
+	mixpanel.track("Pageview", {"Location": 'Blog page', "Date": '{{date}}' , "Title": '{{title}}' || null})
 </script>
 
 {{/post}}
